@@ -60,19 +60,21 @@
         
         if (experienceItems.length > INITIAL_EXPERIENCES && experienceButton) {
             experienceButton.addEventListener('click', function() {
-                const hiddenItems = document.querySelectorAll('.experience-item-hidden');
                 const isCurrentlyExpanded = experienceButton.classList.contains('expanded');
+                
+                // Get all items beyond the initial count
+                const itemsToToggle = Array.from(experienceItems).slice(INITIAL_EXPERIENCES);
                 
                 if (isCurrentlyExpanded) {
                     // Hide items
-                    hiddenItems.forEach(item => {
+                    itemsToToggle.forEach(item => {
                         item.classList.add('experience-item-hidden');
                     });
                     experienceButton.innerHTML = 'Show More <span class="arrow">▼</span>';
                     experienceButton.classList.remove('expanded');
                 } else {
                     // Show items
-                    hiddenItems.forEach(item => {
+                    itemsToToggle.forEach(item => {
                         item.classList.remove('experience-item-hidden');
                     });
                     experienceButton.innerHTML = 'Show Less <span class="arrow">▲</span>';
@@ -89,19 +91,21 @@
         
         if (projectItems.length > INITIAL_PROJECTS && projectButton) {
             projectButton.addEventListener('click', function() {
-                const hiddenItems = document.querySelectorAll('.project-item-hidden');
                 const isCurrentlyExpanded = projectButton.classList.contains('expanded');
+                
+                // Get all items beyond the initial count
+                const itemsToToggle = Array.from(projectItems).slice(INITIAL_PROJECTS);
                 
                 if (isCurrentlyExpanded) {
                     // Hide items
-                    hiddenItems.forEach(item => {
+                    itemsToToggle.forEach(item => {
                         item.classList.add('project-item-hidden');
                     });
                     projectButton.innerHTML = 'Show More <span class="arrow">▼</span>';
                     projectButton.classList.remove('expanded');
                 } else {
                     // Show items
-                    hiddenItems.forEach(item => {
+                    itemsToToggle.forEach(item => {
                         item.classList.remove('project-item-hidden');
                     });
                     projectButton.innerHTML = 'Show Less <span class="arrow">▲</span>';
