@@ -11,7 +11,7 @@
     const INITIAL_EXPERIENCES = 1;
     
     // M = Number of projects to show initially (default: 2)
-    const INITIAL_PROJECTS = 2;
+    const INITIAL_PROJECTS = 1;
     // ========================================
     
     // Smooth scroll for anchor links
