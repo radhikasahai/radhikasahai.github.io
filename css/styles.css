@@ -306,11 +306,6 @@ a:hover {
     .sidebar {
         width: var(--sidebar-width);
         min-width: var(--sidebar-width);
-        position: sticky;
-        top: 0;
-        align-self: flex-start;
-        max-height: 100vh;
-        overflow-y: auto;
         border-bottom: none;
         border-right: 1px solid var(--color-border);
         padding: var(--spacing-xl) var(--spacing-lg);
