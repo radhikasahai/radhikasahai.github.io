@@ -110,11 +110,11 @@ body {
 
 .section-title {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
     color: var(--color-text);
 }
 
@@ -212,7 +212,7 @@ body {
 
 .job-title {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -255,7 +255,7 @@ body {
 
 .project-title {
     font-family: var(--font-heading);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
