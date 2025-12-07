@@ -1,0 +1,473 @@
+/* ========================================
+   Modern Academic Portfolio Styles
+   Clean, professional, mobile-first design
+   ======================================== */
+
+/* CSS Variables for easy customization */
+:root {
+    --color-text: #000;
+    --color-text-light: #333;
+    --color-link: #000;
+    --color-link-hover: #666;
+    --color-border: #ddd;
+    --color-bg: #fff;
+    --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --sidebar-width: 280px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container - Two Column Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--color-bg);
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contact sections - show/hide based on screen size */
+.contact-desktop {
+    display: none; /* Hide on mobile */
+}
+
+.contact-mobile {
+    display: block; /* Show on mobile */
+}
+
+/* Profile Header (Photo + Name Container) */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Profile Photo */
+.profile-photo {
+    margin: 0 0 var(--spacing-md);
+    width: 180px;
+    height: 180px;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+}
+
+/* Name Heading */
+.name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-align: center;
+    text-transform: none;
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
+    text-align: left;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* Education Items */
+.education-item {
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.institution {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.degree {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.field {
+    color: var(--color-text-light);
+    margin-bottom: 0.25rem;
+}
+
+.date {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.contact-item a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: var(--spacing-lg);
+}
+
+.content-section {
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+}
+
+.content-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Bio Section */
+.bio {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+}
+
+.bio p {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Skills Section */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.skills-category {
+    margin-bottom: 0;
+}
+
+.skills-category-title {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+}
+
+.skills-list {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Hidden experience items */
+.experience-item-hidden {
+    display: none;
+}
+
+.experience-header {
+    margin-bottom: var(--spacing-md);
+}
+
+.job-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.experience-header .date {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.experience-description {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.experience-description ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.experience-description li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Project Items */
+.project-item {
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.project-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Hidden project items */
+.project-item-hidden {
+    display: none;
+}
+
+.project-header {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-title a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.project-title a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+.project-tech {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.project-description {
+    color: var(--color-text-light);
+    line-height: 1.7;
+}
+
+.project-description ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.project-description li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Toggle Button */
+.toggle-button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-text);
+    cursor: pointer;
+    margin-top: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.toggle-button:hover {
+    color: var(--color-link-hover);
+}
+
+.toggle-button .arrow {
+    font-size: 0.8rem;
+}
+
+/* Links */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+/* ========================================
+   Tablet and Desktop Styles
+   ======================================== */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .sidebar {
+        width: var(--sidebar-width);
+        min-width: var(--sidebar-width);
+        border-bottom: none;
+        border-right: 1px solid var(--color-border);
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    
+    .sidebar-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    /* Show desktop contact, hide mobile contact */
+    .contact-desktop {
+        display: block;
+    }
+    
+    .contact-mobile {
+        display: none;
+    }
+    
+    /* Keep profile header centered even when sidebar is left-aligned */
+    .profile-header {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .name {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .main-content {
+        flex: 1;
+        padding: var(--spacing-xl);
+        max-width: calc(100% - var(--sidebar-width));
+    }
+    
+    .experience-item,
+    .project-item {
+        padding-right: var(--spacing-lg);
+    }
+}
+
+/* ========================================
+   Large Desktop Styles
+   ======================================== */
+@media (min-width: 1024px) {
+    :root {
+        --sidebar-width: 320px;
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+    
+    .main-content {
+        padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xl) calc(var(--spacing-xl) + var(--spacing-lg));
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .sidebar {
+        position: static;
+        border-right: 1px solid var(--color-border);
+    }
+    
+    .container {
+        flex-direction: row;
+    }
+}
+
