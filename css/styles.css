@@ -65,19 +65,19 @@ body {
     text-align: center;
 }
 
-/* Name Heading */
-.name {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin-bottom: var(--spacing-md);
-    text-transform: uppercase;
+/* Profile Header (Photo + Name Container) */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: var(--spacing-lg);
 }
 
 /* Profile Photo */
 .profile-photo {
-    margin: var(--spacing-md) 0 var(--spacing-lg);
+    margin: 0 0 var(--spacing-md);
     width: 180px;
     height: 180px;
 }
@@ -86,8 +86,19 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 50%;
     border: 1px solid var(--color-border);
+}
+
+/* Name Heading */
+.name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-align: center;
+    text-transform: none;
 }
 
 /* Sidebar Sections */
@@ -310,9 +321,16 @@ a:hover {
         text-align: left;
     }
     
+    /* Keep profile header centered even when sidebar is left-aligned */
+    .profile-header {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    
     .name {
-        font-size: 2rem;
-        text-align: left;
+        font-size: 1.5rem;
+        text-align: center;
     }
     
     .profile-photo {
